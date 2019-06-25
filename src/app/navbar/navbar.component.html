@@ -47,8 +47,13 @@
           </div>
         </li>
       </ul>
-
+        <li *ngIf="!auth.loggedIn()">
         <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#exampleModal"> Login</button>
+      </li>
+      <li *ngIf="auth.loggedIn()">
+        <button type="button" (click)="auth.logout()" routerLink="/home" class="btn btn-outline-danger" > LogOut</button>
+      </li> 
+
     </div>
   </nav>
 

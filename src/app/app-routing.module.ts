@@ -1,3 +1,5 @@
+import { CourseCatergoryComponent } from './User/course-catergory/course-catergory.component';
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -10,7 +12,8 @@ const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'displaycourses', component: DisplaycoursesComponent},
   {path: 'contentprovider', component: ContentproviderComponent},
-  {path: 'addcourse', component:AddcourseComponent}
+  {path: 'addcourse', component:AddcourseComponent},
+ {path:'catergory',component:CourseCatergoryComponent}
 ];
 
 @NgModule({

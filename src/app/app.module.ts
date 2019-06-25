@@ -13,6 +13,8 @@ import { AddcourseComponent } from './contentprovider/addcourse/addcourse.compon
 import {HttpClientModule} from '@angular/common/http'
 import { NgFlashMessagesModule } from 'ng-flash-messages';
 import { JwtHelperService, JwtModule } from '@auth0/angular-jwt';
+import { CourseCatergoryComponent } from './User/course-catergory/course-catergory.component';
+
 
 
 
@@ -29,6 +31,8 @@ export function tokenGetter() {
     HomeComponent,
     ContentproviderComponent,
     AddcourseComponent,
+    CourseCatergoryComponent,
+  
     
   ],
   imports: [
@@ -36,7 +40,7 @@ export function tokenGetter() {
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    NgFlashMessagesModule.forRoot(),
+    NgFlashMessagesModule,
     JwtModule.forRoot({
       config: {
         tokenGetter: tokenGetter
